@@ -410,7 +410,7 @@ export default function ParceriasPage() {
 
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8">
                   <p className="text-lg text-gray-100 italic mb-4 leading-relaxed">
-                    "{caseStudy.testimonial.text}"
+                    &ldquo;{caseStudy.testimonial.text}&rdquo;
                   </p>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
