@@ -10,15 +10,14 @@ export default function Footer() {
           {/* Logo e Descrição */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="relative w-12 h-12">
+              <div className="relative w-16 h-16">
                 <Image
-                  src="/logo.svg"
+                  src="/logo-branco.png"
                   alt="ASSESP Logo"
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="font-bold text-2xl">ASSESP</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Associação de Esportes, Cultura e Lazer de Praia de Santos e Região.
