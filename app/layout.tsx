@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "ASSESP - Associação de Esportes, Cultura e Lazer",
   description: "A ASSESP promove esporte, cultura e lazer na Baixada Santista através de projetos sociais e eventos como o Santos Open de Beach Tennis.",
   keywords: "ASSESP, Beach Tennis, Santos, Esporte, Cultura, Lazer, Santos Open",
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({
