@@ -22,17 +22,15 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="relative w-12 h-12">
+            <div className="relative w-20 h-20">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="ASSESP Logo"
                 fill
-                className="object-contain"
+                className=""
               />
             </div>
-            <span className="font-bold text-xl text-primary-navy">ASSESP</span>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
