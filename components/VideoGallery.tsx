@@ -10,6 +10,7 @@ export default function VideoGallery({ videos, className }: { videos: ProjectVid
         <div key={video.src} className="bg-white rounded-2xl overflow-hidden shadow-lg">
           <video
             src={video.src}
+            poster={video.poster}
             controls
             playsInline
             preload="metadata"
