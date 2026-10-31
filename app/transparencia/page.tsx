@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { 
   FileText, Download, Scale, 
   Building2, Calendar, DollarSign, Users,
-  ExternalLink, Shield, TrendingUp
+  ExternalLink, Shield, TrendingUp, ChevronDown
 } from "lucide-react";
 
 export default function TransparenciaPage() {
@@ -47,48 +47,10 @@ export default function TransparenciaPage() {
     }
   ];
 
-  const financialReports = [
-    {
-      year: "2024",
-      status: "Em andamento",
-      documents: [
-        { name: "Balanço Patrimonial 2024", file: "/docs/balanco-2024.pdf", available: false },
-        { name: "DRE - Demonstração do Resultado", file: "/docs/dre-2024.pdf", available: false },
-        { name: "Relatório de Atividades 2024", file: "/docs/relatorio-atividades-2024.pdf", available: false }
-      ]
-    },
-    {
-      year: "2023",
-      status: "Concluído",
-      documents: [
-        { name: "Balanço Patrimonial 2023", file: "/docs/balanco-2023.pdf", available: true },
-        { name: "DRE - Demonstração do Resultado", file: "/docs/dre-2023.pdf", available: true },
-        { name: "Relatório de Atividades 2023", file: "/docs/relatorio-atividades-2023.pdf", available: true }
-      ]
-    },
-    {
-      year: "2022",
-      status: "Concluído",
-      documents: [
-        { name: "Balanço Patrimonial 2022", file: "/docs/balanco-2022.pdf", available: true },
-        { name: "DRE - Demonstração do Resultado", file: "/docs/dre-2022.pdf", available: true },
-        { name: "Relatório de Atividades 2022", file: "/docs/relatorio-atividades-2022.pdf", available: true }
-      ]
-    },
-    {
-      year: "2021",
-      status: "Concluído",
-      documents: [
-        { name: "Balanço Patrimonial 2021", file: "/docs/balanco-2021.pdf", available: true },
-        { name: "DRE - Demonstração do Resultado", file: "/docs/dre-2021.pdf", available: true },
-        { name: "Relatório de Atividades 2021", file: "/docs/relatorio-atividades-2021.pdf", available: true }
-      ]
-    }
-  ];
-
   const publicPartnerships = [
     {
       title: "Open Santos ASSESP de Beach Tennis 2026",
+      year: 2026,
       instrument: "Termo de Fomento nº 442772/2026 – SEMES",
       totalAmount: "R$ 58.800,00",
       fields: [
@@ -105,6 +67,29 @@ export default function TransparenciaPage() {
       ]
     }
   ];
+
+  // Arquivos publicados por exercício (salvos em /public/docs). Anos sem arquivo aparecem como "Em elaboração".
+  const publishedFinancialDocuments: Record<number, Record<string, string>> = {};
+
+  const foundingYear = 2021;
+  const currentYear = new Date().getFullYear();
+  const financialReports = Array.from(
+    { length: currentYear - foundingYear + 1 },
+    (_, i) => currentYear - i
+  ).map((year) => {
+    const published = publishedFinancialDocuments[year] ?? {};
+    const documents = [
+      { key: "balanco", name: "Balanço Patrimonial" },
+      { key: "dre", name: "DRE - Demonstração do Resultado" },
+      { key: "relatorio", name: "Relatório de Atividades" }
+    ].map((doc) => ({ name: doc.name, file: published[doc.key] }));
+    return {
+      year,
+      documents,
+      partnerships: publicPartnerships.filter((p) => p.year === year),
+      complete: documents.every((doc) => doc.file)
+    };
+  });
 
   const principles = [
     {
@@ -204,7 +189,7 @@ export default function TransparenciaPage() {
         </section>
 
         {/* Public Partnerships */}
-        <section className="py-24 bg-gray-50">
+        <section id="parcerias" className="py-24 bg-gray-50 scroll-mt-20">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <motion.div
@@ -371,7 +356,7 @@ export default function TransparenciaPage() {
         </section>
 
         {/* Financial Reports */}
-        <section className="py-24 bg-gray-50">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <motion.div
@@ -379,76 +364,89 @@ export default function TransparenciaPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="mb-12"
+                className="mb-8"
               >
-                <h2 className="text-3xl font-bold mb-4 text-primary-navy flex items-center">
-                  <DollarSign className="mr-3" size={32} />
+                <h2 className="text-2xl font-bold mb-2 text-primary-navy flex items-center">
+                  <DollarSign className="mr-3" size={28} />
                   Demonstrativos Financeiros
                 </h2>
                 <p className="text-gray-600">
-                  Balanços patrimoniais e demonstrações de resultado por ano
+                  Balanços patrimoniais, demonstrações de resultado e relatórios de atividades por exercício
                 </p>
               </motion.div>
 
-              <div className="space-y-6">
-                {financialReports.map((report, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-2xl p-6 shadow-lg"
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-2xl font-bold text-primary-navy">
+              <div className="bg-white rounded-2xl shadow-lg divide-y divide-gray-100">
+                {financialReports.map((report) => (
+                  <details key={report.year} className="group">
+                    <summary className="flex items-center justify-between px-6 py-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden hover:bg-gray-50 transition-colors">
+                      <span className="font-bold text-primary-navy">
                         Exercício {report.year}
-                      </h3>
-                      <span className={`
-                        px-4 py-1 rounded-full text-sm font-semibold
-                        ${report.status === 'Concluído' 
-                          ? 'bg-green-100 text-green-700' 
-                          : 'bg-yellow-100 text-yellow-700'
-                        }
-                      `}>
-                        {report.status}
                       </span>
-                    </div>
+                      <span className="flex items-center gap-3">
+                        <span className={`
+                          px-3 py-1 rounded-full text-xs font-semibold
+                          ${report.complete
+                            ? 'bg-green-100 text-green-700'
+                            : 'bg-gray-100 text-gray-600'
+                          }
+                        `}>
+                          {report.complete ? 'Disponível' : 'Em elaboração'}
+                        </span>
+                        <ChevronDown size={18} className="text-gray-400 transition-transform group-open:rotate-180" />
+                      </span>
+                    </summary>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="px-6 pb-6 space-y-2">
                       {report.documents.map((doc, docIndex) => (
-                        <div
-                          key={docIndex}
-                          className={`
-                            p-4 border rounded-xl transition-all
-                            ${doc.available 
-                              ? 'border-gray-200 hover:border-primary-blue hover:shadow-md cursor-pointer' 
-                              : 'border-gray-100 bg-gray-50 opacity-60'
-                            }
-                          `}
+                        doc.file ? (
+                          <a
+                            key={docIndex}
+                            href={doc.file}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group/doc"
+                          >
+                            <span className="flex items-center space-x-3">
+                              <FileText className="text-primary-blue" size={18} />
+                              <span className="text-sm font-medium text-gray-700 group-hover/doc:text-primary-blue transition-colors">
+                                {doc.name} {report.year}
+                              </span>
+                            </span>
+                            <Download size={16} className="text-gray-400 group-hover/doc:text-primary-blue transition-colors" />
+                          </a>
+                        ) : (
+                          <div
+                            key={docIndex}
+                            className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                          >
+                            <span className="flex items-center space-x-3">
+                              <FileText className="text-gray-400" size={18} />
+                              <span className="text-sm font-medium text-gray-500">
+                                {doc.name} {report.year}
+                              </span>
+                            </span>
+                            <span className="text-xs text-gray-400">Em elaboração</span>
+                          </div>
+                        )
+                      ))}
+
+                      {report.partnerships.map((partnership, pIndex) => (
+                        <a
+                          key={pIndex}
+                          href="#parcerias"
+                          className="flex items-center justify-between p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
                         >
-                          {doc.available ? (
-                            <a href={doc.file} target="_blank" rel="noopener noreferrer" className="block">
-                              <div className="flex items-center justify-between mb-2">
-                                <FileText className="text-primary-blue" size={20} />
-                                <Download size={16} className="text-gray-400" />
-                              </div>
-                              <p className="text-sm font-semibold text-gray-800">{doc.name}</p>
-                            </a>
-                          ) : (
-                            <>
-                              <div className="flex items-center justify-between mb-2">
-                                <FileText className="text-gray-400" size={20} />
-                                <Calendar size={16} className="text-gray-400" />
-                              </div>
-                              <p className="text-sm font-semibold text-gray-500">{doc.name}</p>
-                              <p className="text-xs text-gray-400 mt-1">Em elaboração</p>
-                            </>
-                          )}
-                        </div>
+                          <span className="flex items-center space-x-3">
+                            <Building2 className="text-primary-blue" size={18} />
+                            <span className="text-sm font-medium text-gray-700">
+                              {partnership.instrument} · {partnership.totalAmount}
+                            </span>
+                          </span>
+                          <span className="text-xs font-semibold text-primary-blue">Ver parceria</span>
+                        </a>
                       ))}
                     </div>
-                  </motion.div>
+                  </details>
                 ))}
               </div>
             </div>
