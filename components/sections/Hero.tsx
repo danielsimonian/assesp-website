@@ -59,26 +59,6 @@ export default function Hero() {
               Seja um Parceiro
             </Link>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-bold text-yellow-300 mb-2">7+</div>
-              <div className="text-lg">Opens Realizados</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-bold text-yellow-300 mb-2">1000+</div>
-              <div className="text-lg">Atletas Participantes</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-bold text-yellow-300 mb-2">3</div>
-              <div className="text-lg">Áreas de Atuação</div>
-            </div>
-          </motion.div>
         </div>
       </div>
 

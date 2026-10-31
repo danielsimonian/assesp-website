@@ -17,13 +17,13 @@ export default function About() {
     },
     {
       icon: Users,
-      title: "Comunidade",
-      description: "Atendemos milhares de pessoas na Baixada Santista, promovendo integração e bem-estar."
+      title: "Inclusão",
+      description: "Atividades abertas a todos, sem discriminação de classe social, raça, gênero, ideologia ou crença."
     },
     {
       icon: Award,
-      title: "Excelência",
-      description: "Reconhecidos pela qualidade de nossos eventos e projetos sociais na região."
+      title: "Transparência",
+      description: "Prestação de contas pública dos recursos recebidos e das parcerias firmadas."
     }
   ];
 
@@ -86,19 +86,13 @@ export default function About() {
               </h3>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Fundada em agosto de 2021, a ASSESP nasceu com o propósito de
+                  Fundada em maio de 2021, a ASSESP nasceu com o propósito de
                   democratizar o acesso ao esporte, cultura e lazer na região de Santos.
                 </p>
                 <p>
-                  Realizamos mais de 7 Opens de Beach Tennis, tornando-nos referência
-                  na modalidade na Baixada Santista. Em 2024, recebemos nossa primeira
-                  emenda impositiva para o Santos Open ASSESP, marcando uma nova fase
-                  de crescimento.
-                </p>
-                <p>
-                  Hoje, expandimos nossa atuação para projetos culturais e de lazer,
-                  buscando parcerias com empresas e órgãos públicos para ampliar nosso
-                  impacto social.
+                  Em 2026, realizamos o Open Santos ASSESP de Beach Tennis em parceria
+                  com a Prefeitura de Santos, por meio da Secretaria Municipal de
+                  Esportes (SEMES).
                 </p>
               </div>
             </div>
@@ -117,7 +111,7 @@ export default function About() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-200 mb-1">Fundação</p>
-                  <p className="font-semibold">17 de Agosto de 2021</p>
+                  <p className="font-semibold">25 de Maio de 2021</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-200 mb-1">Endereço</p>

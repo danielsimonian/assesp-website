@@ -9,7 +9,7 @@ export default function Partners() {
     {
       icon: TrendingUp,
       title: "Visibilidade",
-      description: "Destaque da sua marca em eventos com milhares de participantes"
+      description: "Destaque da sua marca nos eventos e na divulgação da ASSESP"
     },
     {
       icon: Users,
@@ -42,7 +42,7 @@ export default function Partners() {
             Seja Nosso Parceiro
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Empresas como Ambev, Natura e SESI já apoiam projetos sociais.
+            Apoie projetos de esporte, cultura e lazer na Baixada Santista.
             Junte-se a nós nessa transformação!
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ export default function Partners() {
               <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl">
                 <h4 className="font-bold text-purple-600 mb-2">Leis de Incentivo</h4>
                 <p className="text-sm text-gray-600">
-                  Projetos aprovados em editais e leis culturais
+                  Apoio a projetos por meio de editais e leis de incentivo
                 </p>
               </div>
               <div className="p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl">
@@ -110,25 +110,6 @@ export default function Partners() {
             >
               Entre em Contato
             </Link>
-          </div>
-        </motion.div>
-
-        {/* Logos dos parceiros (placeholder) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-gray-500 mb-8 font-medium">
-            Buscamos parcerias com empresas comprometidas com o desenvolvimento social
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-40">
-            <div className="text-2xl font-bold text-gray-400">Ambev</div>
-            <div className="text-2xl font-bold text-gray-400">Natura</div>
-            <div className="text-2xl font-bold text-gray-400">SESI</div>
-            <div className="text-2xl font-bold text-gray-400">Sua Empresa</div>
           </div>
         </motion.div>
       </div>

@@ -13,10 +13,11 @@ import {
 
 export default function TransparenciaPage() {
   const legalInfo = [
-    { label: "Razão Social", value: "Associação Santista de Esportes de Praia" },
+    { label: "Razão Social", value: "Associação de Esportes, Cultura e Lazeres de Praia de Santos e Região – ASSESP/SP" },
     { label: "Nome Fantasia", value: "ASSESP" },
     { label: "CNPJ", value: "43.696.620/0001-10" },
     { label: "Data de Fundação", value: "25 de Maio de 2021" },
+    { label: "Início das Atividades (CNPJ)", value: "17 de Agosto de 2021" },
     { label: "Natureza Jurídica", value: "Associação Privada" },
     { label: "Atividade Principal", value: "Atividades associativas não especificadas anteriormente" },
     { label: "CNAE", value: "S-9499-5/00" },
@@ -30,22 +31,8 @@ export default function TransparenciaPage() {
       title: "Estatuto Social da ASSESP",
       description: "Estatuto completo com 9 páginas contendo todas as regras de funcionamento da associação",
       date: "25/05/2021",
-      size: "245 KB",
-      file: "/docs/estatuto-assesp.pdf"
-    },
-    {
-      title: "Ata de Fundação",
-      description: "Documento de constituição da ASSESP e eleição da primeira diretoria",
-      date: "25/05/2021",
       size: "180 KB",
-      file: "/docs/ata-fundacao.pdf"
-    },
-    {
-      title: "Comprovante de Inscrição CNPJ",
-      description: "Cartão CNPJ emitido pela Receita Federal",
-      date: "Atualizado",
-      size: "95 KB",
-      file: "/docs/cnpj.pdf"
+      file: "/docs/estatuto-assesp.pdf"
     }
   ];
 

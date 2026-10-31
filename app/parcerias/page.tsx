@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { 
-  TrendingUp, Users, Award, FileText, Handshake, 
-  Target, Eye, Heart, DollarSign, Package, Wrench,
+  TrendingUp, Users, Award, FileText, 
+  Eye, Heart, DollarSign, Package, Wrench,
   CheckCircle, ArrowRight, Mail, Building2, MessageCircle
 } from "lucide-react";
 import Link from "next/link";
@@ -15,7 +15,7 @@ export default function ParceriasPage() {
     {
       icon: Eye,
       title: "Visibilidade de Marca",
-      description: "Exposição em eventos com milhares de participantes e ampla cobertura nas redes sociais e mídia local."
+      description: "Exposição da sua marca nos eventos da ASSESP e na divulgação em redes sociais."
     },
     {
       icon: Heart,
@@ -50,7 +50,7 @@ export default function ParceriasPage() {
       color: "from-yellow-400 to-yellow-600",
       benefits: [
         "Logo em destaque em todos os materiais de divulgação",
-        "Naming rights do evento (Ex: Santos Open [Sua Marca])",
+        "Naming rights do evento (Ex: Open Santos [Sua Marca])",
         "Estande exclusivo no evento",
         "Menção em todas as postagens de redes sociais",
         "Até 10 convites VIP para o evento",
@@ -110,22 +110,6 @@ export default function ParceriasPage() {
     }
   ];
 
-  const caseStudy = {
-    title: "Santos Open ASSESP 2024",
-    subtitle: "Nosso maior case de sucesso",
-    stats: [
-      { value: "500+", label: "Atletas Participantes" },
-      { value: "10k+", label: "Público Total" },
-      { value: "50k+", label: "Alcance nas Redes" },
-      { value: "15+", label: "Veículos de Mídia" }
-    ],
-    testimonial: {
-      text: "O Santos Open ASSESP foi um marco para o Beach Tennis na região. A organização impecável e o engajamento da comunidade demonstraram o potencial da ASSESP em realizar eventos de grande porte.",
-      author: "Vereador Fábio Duarte",
-      role: "Autor da Emenda Impositiva"
-    }
-  };
-
   return (
     <>
       <Header />
@@ -170,13 +154,13 @@ export default function ParceriasPage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <div className="bg-primary-blue/10 px-6 py-3 rounded-full">
-                    <span className="text-primary-blue font-semibold">✓ Empresa sem fins lucrativos</span>
+                    <span className="text-primary-blue font-semibold">✓ Associação sem fins lucrativos</span>
                   </div>
                   <div className="bg-primary-coral/10 px-6 py-3 rounded-full">
                     <span className="text-primary-coral font-semibold">✓ Transparência total</span>
                   </div>
                   <div className="bg-primary-orange/10 px-6 py-3 rounded-full">
-                    <span className="text-primary-orange font-semibold">✓ Impacto mensurável</span>
+                    <span className="text-primary-orange font-semibold">✓ Impacto social</span>
                   </div>
                 </div>
               </motion.div>
@@ -373,57 +357,6 @@ export default function ParceriasPage() {
           </div>
         </section>
 
-        {/* Case Study */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-5xl mx-auto"
-            >
-              <div className="bg-gradient-to-br from-primary-navy to-primary-blue text-white rounded-3xl p-8 md:p-12">
-                <div className="text-center mb-12">
-                  <div className="inline-block bg-yellow-400 text-primary-navy px-4 py-1 rounded-full text-sm font-bold mb-4">
-                    CASE DE SUCESSO
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-2">
-                    {caseStudy.title}
-                  </h2>
-                  <p className="text-xl text-gray-200">{caseStudy.subtitle}</p>
-                </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                  {caseStudy.stats.map((stat, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-4xl font-bold text-yellow-300 mb-2">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-gray-200">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8">
-                  <p className="text-lg text-gray-100 italic mb-4 leading-relaxed">
-                    &ldquo;{caseStudy.testimonial.text}&rdquo;
-                  </p>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <Users className="text-primary-navy" size={24} />
-                    </div>
-                    <div>
-                      <p className="font-bold">{caseStudy.testimonial.author}</p>
-                      <p className="text-sm text-gray-300">{caseStudy.testimonial.role}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* CTA Final */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -476,9 +409,6 @@ export default function ParceriasPage() {
                     <span>Solicitar Proposta de Parceria</span>
                     <ArrowRight />
                   </Link>
-                  <p className="text-sm text-gray-500 mt-4">
-                    Resposta em até 48 horas úteis
-                  </p>
                 </div>
               </div>
             </motion.div>

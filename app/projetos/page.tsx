@@ -3,25 +3,20 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Trophy, Building2, Calendar, FileText, ArrowRight } from "lucide-react";
+import { Building2, Calendar, FileText, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { getPartnershipBySlug } from "@/lib/transparencia";
+import VideoGallery from "@/components/VideoGallery";
+import { openSantos2026 } from "@/lib/projetos";
 
 export default function ProjetosPage() {
-  const partnership = getPartnershipBySlug("termo-de-fomento-442772-2026");
-
   const projects = [
     {
-      title: "Open Santos ASSESP de Beach Tennis 2026",
-      area: "Esporte",
-      year: "2026",
-      description: "Torneio de Beach Tennis realizado pela ASSESP em parceria com a Prefeitura Municipal de Santos, por meio da Secretaria Municipal de Esportes (SEMES).",
+      ...openSantos2026,
       details: [
-        { icon: Building2, text: "Parceria com a Prefeitura de Santos – SEMES" },
-        { icon: FileText, text: "Termo de Fomento nº 442772/2026" },
-        { icon: Calendar, text: "2026" }
-      ],
-      partnershipSlug: partnership?.slug
+        { icon: Building2, text: `Parceria com a ${openSantos2026.partner}` },
+        { icon: FileText, text: openSantos2026.instrument },
+        { icon: Calendar, text: openSantos2026.year }
+      ]
     }
   ];
 
@@ -64,14 +59,7 @@ export default function ProjetosPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <div className="bg-gradient-to-br from-primary-navy via-primary-blue to-primary-coral rounded-3xl overflow-hidden shadow-2xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                      {/* Image Placeholder */}
-                      <div className="relative h-72 md:h-auto bg-gradient-to-br from-primary-blue to-primary-coral">
-                        <div className="absolute inset-0 flex items-center justify-center text-white">
-                          <Trophy size={80} className="opacity-50" />
-                        </div>
-                      </div>
-
+                    <div className="grid grid-cols-1">
                       {/* Content */}
                       <div className="p-8 md:p-12 text-white">
                         <div className="inline-block bg-yellow-400 text-primary-navy px-4 py-1 rounded-full text-sm font-bold mb-4">
@@ -94,18 +82,17 @@ export default function ProjetosPage() {
                             );
                           })}
                         </div>
-                        {project.partnershipSlug && (
-                          <Link
+                        <Link
                             href={`/transparencia/parcerias/${project.partnershipSlug}`}
                             className="inline-flex items-center space-x-2 bg-white text-primary-navy px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors"
                           >
                             <span>Ver Dados da Parceria</span>
                             <ArrowRight />
                           </Link>
-                        )}
                       </div>
                     </div>
                   </div>
+                  <VideoGallery videos={project.videos} className="mt-8" />
                 </motion.div>
               ))}
             </div>

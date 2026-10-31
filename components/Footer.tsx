@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -20,25 +20,18 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Associação de Esportes, Cultura e Lazer de Praia de Santos e Região.
+              Associação de Esportes, Cultura e Lazeres de Praia de Santos e Região.
               Promovendo transformação social através do esporte, cultura e lazer.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/pointdogonzagabt/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram da ASSESP"
                 className="hover:text-primary-coral transition-colors"
               >
                 <Instagram size={24} />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary-coral transition-colors"
-              >
-                <Facebook size={24} />
               </a>
             </div>
           </div>

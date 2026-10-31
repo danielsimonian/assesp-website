@@ -10,23 +10,11 @@ export default function SobrePage() {
   const boardMembers = [
     {
       name: "Jadson Maciel Vilela",
-      role: "Presidente",
-      image: "/team/presidente.jpg"
+      role: "Presidente"
     },
     {
       name: "Maria de Fátima Almeida Queirós",
-      role: "Diretora Secretária",
-      image: "/team/secretaria.jpg"
-    },
-    {
-      name: "Diretor Financeiro",
-      role: "Diretor Financeiro",
-      image: "/team/financeiro.jpg"
-    },
-    {
-      name: "Diretor de Marketing",
-      role: "Diretor de Marketing, Comunicação e Eventos",
-      image: "/team/marketing.jpg"
+      role: "Diretora Secretária"
     }
   ];
 
@@ -49,7 +37,7 @@ export default function SobrePage() {
     {
       icon: Award,
       title: "Excelência",
-      description: "Promovemos eventos de alta qualidade desde a iniciação até o alto rendimento, buscando sempre a excelência em todas as nossas atividades."
+      description: "Atividades esportivas da iniciação ao alto rendimento, buscando sempre a excelência em tudo o que fazemos."
     }
   ];
 
@@ -80,12 +68,12 @@ export default function SobrePage() {
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Sobre a ASSESP
               </h1>
-<p className="text-2xl text-gray-200 mb-2 font-bold">
-  Associação Santista de Esportes de Praia
-</p>
-<p className="text-xl text-gray-200">
-  Transformando vidas através do esporte, cultura e lazer desde 2021
-</p>
+              <p className="text-2xl text-gray-200 mb-2 font-bold">
+                Associação de Esportes, Cultura e Lazeres de Praia de Santos e Região
+              </p>
+              <p className="text-xl text-gray-200">
+                Transformando vidas através do esporte, cultura e lazer desde 2021
+              </p>
             </motion.div>
           </div>
         </section>
@@ -105,29 +93,16 @@ export default function SobrePage() {
                 </h2>
                 <div className="prose prose-lg max-w-none">
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    A <strong>Associação Santista de Esportes de Praia (ASSESP)</strong> foi fundada
+                    A <strong>ASSESP</strong> foi fundada
                     em <strong>25 de maio de 2021</strong> como uma entidade civil sem fins lucrativos,
                     com personalidade jurídica e duração por tempo indeterminado. Nossa sede está
                     localizada no coração do Gonzaga, em Santos, estrategicamente posicionada para
                     atender toda a Baixada Santista.
                   </p>
-                  <p className="text-gray-700 leading-relaxed mb-6">
-                    Desde nossa fundação, a ASSESP tem se dedicado a promover eventos esportivos,
-                    culturais e recreativos que proporcionam entretenimento e integração social para
-                    toda a comunidade. Realizamos mais de 7 Opens de Beach Tennis, tornando-nos
-                    referência na modalidade na região.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed mb-6">
-                    Em 2024, alcançamos um marco histórico ao receber nossa primeira emenda impositiva
-                    para realizar o <strong>Santos Open ASSESP</strong>, através do apoio do vereador
-                    Fábio Duarte. Este evento marca uma nova fase de crescimento e reconhecimento do
-                    nosso trabalho junto ao poder público.
-                  </p>
                   <p className="text-gray-700 leading-relaxed">
-                    Hoje, expandimos nossa atuação para projetos culturais, educativos e de lazer,
-                    buscando parcerias com empresas privadas e órgãos públicos para ampliar nosso
-                    impacto social e promover o desenvolvimento da comunidade através do esporte,
-                    cultura e lazer.
+                    Em 2026, realizamos o <strong>Open Santos ASSESP de Beach Tennis</strong> em
+                    parceria com a Prefeitura de Santos, por meio da Secretaria Municipal de Esportes
+                    (SEMES), com recursos do Termo de Fomento nº 442772/2026.
                   </p>
                 </div>
               </motion.div>
@@ -237,7 +212,7 @@ export default function SobrePage() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {boardMembers.map((member, index) => (
                 <motion.div
                   key={index}
@@ -247,12 +222,6 @@ export default function SobrePage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  {/* Photo Placeholder */}
-                  <div className="relative h-64 bg-gradient-to-br from-primary-blue to-primary-coral">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Users className="text-white opacity-30" size={80} />
-                    </div>
-                  </div>
                   <div className="p-6 text-center">
                     <h3 className="text-xl font-bold text-primary-navy mb-2">
                       {member.name}
@@ -288,7 +257,7 @@ export default function SobrePage() {
                       <div>
                         <p className="text-sm text-gray-200 mb-1">Razão Social</p>
                         <p className="font-semibold text-lg">
-                          Associação Santista de Esportes de Praia
+                          Associação de Esportes, Cultura e Lazeres de Praia de Santos e Região – ASSESP/SP
                         </p>
                       </div>
                       <div>
@@ -309,7 +278,7 @@ export default function SobrePage() {
                       <div>
                         <p className="text-sm text-gray-200 mb-1">Natureza Jurídica</p>
                         <p className="font-semibold text-lg">
-                          Entidade Civil sem Fins Lucrativos
+                          Associação Privada sem Fins Lucrativos
                         </p>
                       </div>
                     </div>

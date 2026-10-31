@@ -100,20 +100,6 @@ export default function ContatoPage() {
                     </div>
                   </div>
                 </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="bg-gradient-to-br from-primary-navy to-primary-blue text-white rounded-2xl p-6"
-                >
-                  <h3 className="font-bold mb-2">Horário de Atendimento</h3>
-                  <p className="text-sm text-gray-200">
-                    Segunda a Sexta<br />
-                    9h às 18h
-                  </p>
-                </motion.div>
               </div>
 
               {/* Contact Channels */}
@@ -129,7 +115,7 @@ export default function ContatoPage() {
                     Fale com a Gente
                   </h2>
                   <p className="text-gray-600 mb-8">
-                    Escolha o canal de sua preferência. Respondemos em horário comercial.
+                    Escolha o canal de sua preferência.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
