@@ -115,8 +115,8 @@ export default function ContatoPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-primary-navy mb-2">Telefone</h3>
-                      <a href="tel:+5513999999999" className="text-primary-blue hover:underline text-sm">
-                        (13) 99999-9999
+                      <a href="tel:+5513991760203" className="text-primary-blue hover:underline text-sm">
+                        (13) 99176-0203
                       </a>
                     </div>
                   </div>

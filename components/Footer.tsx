@@ -90,7 +90,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Phone size={20} />
-                <span>(13) 99999-9999</span>
+                <span>(13) 99176-0203</span>
               </li>
             </ul>
           </div>

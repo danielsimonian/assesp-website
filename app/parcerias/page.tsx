@@ -455,11 +455,11 @@ export default function ParceriasPage() {
                       <p className="font-semibold text-gray-700 text-sm">contato@assesp.org.br</p>
                     </div>
                   </a>
-                  <a href="tel:+5513999999999" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                  <a href="tel:+5513991760203" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
                     <Phone className="text-primary-coral" size={24} />
                     <div>
                       <p className="text-sm text-gray-500">Telefone</p>
-                      <p className="font-semibold text-gray-700 text-sm">(13) 99999-9999</p>
+                      <p className="font-semibold text-gray-700 text-sm">(13) 99176-0203</p>
                     </div>
                   </a>
                   <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl">
