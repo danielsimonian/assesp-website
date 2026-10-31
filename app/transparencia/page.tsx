@@ -109,6 +109,26 @@ export default function TransparenciaPage() {
     }
   ];
 
+  const publicPartnerships = [
+    {
+      title: "Open Santos ASSESP de Beach Tennis 2026",
+      instrument: "Termo de Fomento nº 442772/2026 – SEMES",
+      totalAmount: "R$ 58.800,00",
+      fields: [
+        { label: "Organização da Sociedade Civil", value: "Associação de Esportes, Cultura e Lazeres de Praia de Santos e Região – ASSESP" },
+        { label: "CNPJ", value: "43.696.620/0001-10" },
+        { label: "Órgão Concedente", value: "Prefeitura Municipal de Santos – Secretaria Municipal de Esportes (SEMES)" },
+        { label: "Instrumento", value: "Termo de Fomento nº 442772/2026 – SEMES" },
+        { label: "Data de Assinatura", value: "23 de junho de 2026" },
+        { label: "Processo Administrativo", value: "PA nº 11849/2026-67" },
+        { label: "Objeto", value: "Realização do Open Santos ASSESP de Beach Tennis 2026" },
+        { label: "Valor Total da Parceria", value: "R$ 58.800,00" },
+        { label: "Valor Efetivamente Liberado", value: "R$ 58.800,00, em parcela única" },
+        { label: "Data do Repasse", value: "17 de julho de 2026" }
+      ]
+    }
+  ];
+
   const lawsAndGrants = [
     {
       title: "Emenda Impositiva - Santos Open 2024",
@@ -215,6 +235,71 @@ export default function TransparenciaPage() {
                     </motion.div>
                   );
                 })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Public Partnerships */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-12"
+              >
+                <h2 className="text-3xl font-bold mb-4 text-primary-navy flex items-center">
+                  <Building2 className="mr-3" size={32} />
+                  Parcerias com a Administração Pública
+                </h2>
+                <p className="text-gray-600">
+                  Informações divulgadas conforme o art. 11 da Lei nº 13.019/2014 (Marco Regulatório das Organizações da Sociedade Civil)
+                </p>
+              </motion.div>
+
+              <div className="space-y-6">
+                {publicPartnerships.map((partnership, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                  >
+                    <div className="bg-gradient-to-br from-primary-navy to-primary-blue text-white p-6 md:p-8">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div>
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/20 mb-3">
+                            Verba Pública
+                          </span>
+                          <h3 className="text-2xl font-bold mb-1">
+                            {partnership.title}
+                          </h3>
+                          <p className="text-gray-200">{partnership.instrument}</p>
+                        </div>
+                        <div className="md:text-right">
+                          <p className="text-sm text-gray-200 mb-1">Valor total da parceria</p>
+                          <p className="text-3xl font-bold">{partnership.totalAmount}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-6 md:p-8">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {partnership.fields.map((field, fieldIndex) => (
+                          <div key={fieldIndex} className="border-b border-gray-100 pb-4">
+                            <p className="text-sm text-gray-500 mb-1">{field.label}</p>
+                            <p className="font-semibold text-gray-800">{field.value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
