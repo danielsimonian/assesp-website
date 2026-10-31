@@ -29,6 +29,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# documentos administrativos (não fazem parte do site)
+/documentos-assesp/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
