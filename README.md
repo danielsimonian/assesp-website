@@ -193,7 +193,7 @@ Rua Doutor Luis de Faria, 109
 Gonzaga, Santos - SP  
 CEP 11.060-481  
 
-Email: contato@assesp.org.br  
+Email: assesp_sp@hotmail.com  
 CNPJ: 43.696.620/0001-10
 
 ## 📄 Licença

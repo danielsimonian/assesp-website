@@ -74,8 +74,8 @@ export default function ContatoPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-primary-navy mb-2">E-mail</h3>
-                      <a href="mailto:contato@assesp.org.br" className="text-primary-blue hover:underline text-sm">
-                        contato@assesp.org.br
+                      <a href="mailto:assesp_sp@hotmail.com" className="text-primary-blue hover:underline text-sm">
+                        assesp_sp@hotmail.com
                       </a>
                     </div>
                   </div>
@@ -151,14 +151,14 @@ export default function ContatoPage() {
                     </a>
 
                     <a
-                      href="mailto:contato@assesp.org.br"
+                      href="mailto:assesp_sp@hotmail.com"
                       className="group flex flex-col p-6 border border-gray-200 rounded-2xl hover:border-primary-blue hover:shadow-lg transition-all"
                     >
                       <div className="w-14 h-14 bg-gradient-to-br from-primary-coral to-primary-orange rounded-xl flex items-center justify-center mb-4">
                         <Mail className="text-white" size={28} />
                       </div>
                       <h3 className="text-xl font-bold text-primary-navy mb-1">E-mail</h3>
-                      <p className="text-gray-600 text-sm mb-6">contato@assesp.org.br</p>
+                      <p className="text-gray-600 text-sm mb-6">assesp_sp@hotmail.com</p>
                       <span className="mt-auto inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-primary-blue to-primary-coral text-white px-6 py-3 rounded-xl font-bold group-hover:shadow-lg transition-all">
                         <span>Enviar E-mail</span>
                         <ArrowRight size={18} />

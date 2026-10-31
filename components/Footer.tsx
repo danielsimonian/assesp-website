@@ -84,8 +84,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={20} />
-                <a href="mailto:contato@assesp.org.br" className="hover:text-white transition-colors">
-                  contato@assesp.org.br
+                <a href="mailto:assesp_sp@hotmail.com" className="hover:text-white transition-colors">
+                  assesp_sp@hotmail.com
                 </a>
               </li>
               <li className="flex items-center space-x-2">

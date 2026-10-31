@@ -445,11 +445,11 @@ export default function ParceriasPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  <a href="mailto:contato@assesp.org.br" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                  <a href="mailto:assesp_sp@hotmail.com" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
                     <Mail className="text-primary-blue" size={24} />
                     <div>
                       <p className="text-sm text-gray-500">E-mail</p>
-                      <p className="font-semibold text-gray-700 text-sm">contato@assesp.org.br</p>
+                      <p className="font-semibold text-gray-700 text-sm">assesp_sp@hotmail.com</p>
                     </div>
                   </a>
                   <a href="https://wa.me/5513991760203" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">

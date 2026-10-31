@@ -386,7 +386,7 @@ export default function TransparenciaPage() {
                 Entre em contato conosco para solicitar documentos adicionais ou esclarecer dúvidas
               </p>
               <a
-                href="mailto:contato@assesp.org.br"
+                href="mailto:assesp_sp@hotmail.com"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-blue to-primary-coral text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all duration-300"
               >
                 <span>Entrar em Contato</span>
