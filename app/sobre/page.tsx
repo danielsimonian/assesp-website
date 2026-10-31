@@ -100,9 +100,7 @@ export default function SobrePage() {
                     atender toda a Baixada Santista.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    Em 2026, realizamos o <strong>Open Santos ASSESP de Beach Tennis</strong> em
-                    parceria com a Prefeitura de Santos, por meio da Secretaria Municipal de Esportes
-                    (SEMES), com recursos do Termo de Fomento nº 442772/2026.
+                    Em 2026, realizamos o <strong>Open Santos ASSESP de Beach Tennis</strong>.
                   </p>
                 </div>
               </motion.div>

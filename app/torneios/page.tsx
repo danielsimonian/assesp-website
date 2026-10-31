@@ -3,8 +3,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { Building2, Calendar, FileText, ArrowRight } from "lucide-react";
+import { Calendar } from "lucide-react";
 import VideoGallery from "@/components/VideoGallery";
 import { openSantos2026 } from "@/lib/projetos";
 
@@ -47,36 +46,16 @@ export default function TorneiosPage() {
                   transition={{ duration: 0.6 }}
                 >
                   <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
-                    <div className="inline-block bg-primary-blue/10 text-primary-blue px-4 py-1 rounded-full text-sm font-bold mb-4">
-                      Verba Pública
-                    </div>
                     <h2 className="text-3xl font-bold mb-4 text-primary-navy">
                       {tournament.title}
                     </h2>
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {tournament.description}
                     </p>
-                    <div className="space-y-3 mb-8">
-                      <div className="flex items-center space-x-3 text-gray-600">
-                        <Calendar size={20} className="text-primary-blue" />
-                        <span>{tournament.year}</span>
-                      </div>
-                      <div className="flex items-center space-x-3 text-gray-600">
-                        <Building2 size={20} className="text-primary-coral" />
-                        <span>{tournament.partner}</span>
-                      </div>
-                      <div className="flex items-center space-x-3 text-gray-600">
-                        <FileText size={20} className="text-primary-orange" />
-                        <span>{tournament.instrument}</span>
-                      </div>
+                    <div className="flex items-center space-x-3 text-gray-600">
+                      <Calendar size={20} className="text-primary-blue" />
+                      <span>{tournament.year}</span>
                     </div>
-                    <Link
-                      href={`/transparencia/parcerias/${tournament.partnershipSlug}`}
-                      className="inline-flex items-center space-x-2 text-primary-blue font-bold hover:underline"
-                    >
-                      <span>Ver dados da parceria</span>
-                      <ArrowRight size={20} />
-                    </Link>
                   </div>
 
                   <VideoGallery videos={tournament.videos} className="mt-8" />

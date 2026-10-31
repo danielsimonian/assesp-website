@@ -3,22 +3,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Building2, Calendar, FileText, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import VideoGallery from "@/components/VideoGallery";
 import { openSantos2026 } from "@/lib/projetos";
 
 export default function ProjetosPage() {
-  const projects = [
-    {
-      ...openSantos2026,
-      details: [
-        { icon: Building2, text: `Parceria com a ${openSantos2026.partner}` },
-        { icon: FileText, text: openSantos2026.instrument },
-        { icon: Calendar, text: openSantos2026.year }
-      ]
-    }
-  ];
+  const projects = [openSantos2026];
 
   return (
     <>
@@ -68,27 +58,9 @@ export default function ProjetosPage() {
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">
                           {project.title}
                         </h2>
-                        <p className="text-lg text-gray-100 mb-6 leading-relaxed">
+                        <p className="text-lg text-gray-100 leading-relaxed">
                           {project.description}
                         </p>
-                        <div className="space-y-3 mb-8">
-                          {project.details.map((detail, detailIndex) => {
-                            const Icon = detail.icon;
-                            return (
-                              <div key={detailIndex} className="flex items-center space-x-3">
-                                <Icon size={20} className="text-yellow-300" />
-                                <span>{detail.text}</span>
-                              </div>
-                            );
-                          })}
-                        </div>
-                        <Link
-                            href={`/transparencia/parcerias/${project.partnershipSlug}`}
-                            className="inline-flex items-center space-x-2 bg-white text-primary-navy px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors"
-                          >
-                            <span>Ver Dados da Parceria</span>
-                            <ArrowRight />
-                          </Link>
                       </div>
                     </div>
                   </div>

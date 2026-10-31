@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Building2, FileText, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import VideoGallery from "@/components/VideoGallery";
 import { openSantos2026 } from "@/lib/projetos";
 
@@ -40,19 +40,9 @@ export default function Projects() {
             <h3 className="text-3xl md:text-4xl font-bold mb-4">
               {openSantos2026.title}
             </h3>
-            <p className="text-lg text-gray-100 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-100 mb-8 leading-relaxed">
               {openSantos2026.description}
             </p>
-            <div className="space-y-3 mb-8">
-              <div className="flex items-center space-x-3">
-                <Building2 size={20} className="text-yellow-300" />
-                <span>{openSantos2026.partner}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <FileText size={20} className="text-yellow-300" />
-                <span>{openSantos2026.instrument}</span>
-              </div>
-            </div>
             <Link
               href="/projetos"
               className="inline-flex items-center space-x-2 bg-white text-primary-navy px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors"

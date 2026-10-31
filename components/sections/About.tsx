@@ -90,9 +90,7 @@ export default function About() {
                   democratizar o acesso ao esporte, cultura e lazer na região de Santos.
                 </p>
                 <p>
-                  Em 2026, realizamos o Open Santos ASSESP de Beach Tennis em parceria
-                  com a Prefeitura de Santos, por meio da Secretaria Municipal de
-                  Esportes (SEMES).
+                  Em 2026, realizamos o Open Santos ASSESP de Beach Tennis.
                 </p>
               </div>
             </div>
