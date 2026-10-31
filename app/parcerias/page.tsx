@@ -47,7 +47,6 @@ export default function ParceriasPage() {
   const sponsorshipTiers = [
     {
       name: "Cota Ouro",
-      price: "R$ 50.000+",
       color: "from-yellow-400 to-yellow-600",
       benefits: [
         "Logo em destaque em todos os materiais de divulgação",
@@ -63,7 +62,6 @@ export default function ParceriasPage() {
     },
     {
       name: "Cota Prata",
-      price: "R$ 20.000 - R$ 49.999",
       color: "from-gray-300 to-gray-500",
       benefits: [
         "Logo em materiais de divulgação",
@@ -78,7 +76,6 @@ export default function ParceriasPage() {
     },
     {
       name: "Cota Bronze",
-      price: "R$ 5.000 - R$ 19.999",
       color: "from-orange-400 to-orange-600",
       benefits: [
         "Logo em materiais digitais",
@@ -270,8 +267,7 @@ export default function ParceriasPage() {
                         MAIS POPULAR
                       </div>
                     )}
-                    <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
-                    <div className="text-3xl font-bold">{tier.price}</div>
+                    <h3 className="text-2xl font-bold">{tier.name}</h3>
                   </div>
                   <div className="p-6">
                     <ul className="space-y-3">
