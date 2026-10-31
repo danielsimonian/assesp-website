@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { 
   TrendingUp, Users, Award, FileText, Handshake, 
   Target, Eye, Heart, DollarSign, Package, Wrench,
-  CheckCircle, ArrowRight, Mail, Building2, Phone
+  CheckCircle, ArrowRight, Mail, Building2, MessageCircle
 } from "lucide-react";
 import Link from "next/link";
 
@@ -267,7 +267,8 @@ export default function ParceriasPage() {
                         MAIS POPULAR
                       </div>
                     )}
-                    <h3 className="text-2xl font-bold">{tier.name}</h3>
+                    <h3 className="text-2xl font-bold mb-1">{tier.name}</h3>
+                    <p className="text-sm font-semibold text-white/90">Valores sob consulta</p>
                   </div>
                   <div className="p-6">
                     <ul className="space-y-3">
@@ -451,10 +452,10 @@ export default function ParceriasPage() {
                       <p className="font-semibold text-gray-700 text-sm">contato@assesp.org.br</p>
                     </div>
                   </a>
-                  <a href="tel:+5513991760203" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                    <Phone className="text-primary-coral" size={24} />
+                  <a href="https://wa.me/5513991760203" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                    <MessageCircle className="text-primary-coral" size={24} />
                     <div>
-                      <p className="text-sm text-gray-500">Telefone</p>
+                      <p className="text-sm text-gray-500">WhatsApp</p>
                       <p className="font-semibold text-gray-700 text-sm">(13) 99176-0203</p>
                     </div>
                   </a>

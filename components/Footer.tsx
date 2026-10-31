@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Facebook, Mail, MapPin, MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -89,8 +89,10 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center space-x-2">
-                <Phone size={20} />
-                <span>(13) 99176-0203</span>
+                <MessageCircle size={20} />
+                <a href="https://wa.me/5513991760203" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  (13) 99176-0203
+                </a>
               </li>
             </ul>
           </div>
