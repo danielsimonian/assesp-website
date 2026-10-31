@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { 
-  FileText, Download, CheckCircle, Scale, 
+  FileText, Download, Scale, 
   Building2, Calendar, DollarSign, Users,
   Award, ExternalLink, Shield, TrendingUp
 } from "lucide-react";
@@ -125,20 +125,6 @@ export default function TransparenciaPage() {
         { label: "Valor Total da Parceria", value: "R$ 58.800,00" },
         { label: "Valor Efetivamente Liberado", value: "R$ 58.800,00, em parcela única" },
         { label: "Data do Repasse", value: "17 de julho de 2026" }
-      ]
-    }
-  ];
-
-  const lawsAndGrants = [
-    {
-      title: "Emenda Impositiva - Santos Open 2024",
-      description: "Emenda impositiva do vereador Fábio Duarte destinando recursos para realização do Santos Open ASSESP",
-      amount: "R$ 100.000,00",
-      status: "Executado",
-      year: "2024",
-      documents: [
-        { name: "Texto da Emenda", file: "/docs/emenda-santos-open.pdf" },
-        { name: "Termo de Colaboração", file: "/docs/termo-colaboracao-santos-open.pdf" }
       ]
     }
   ];
@@ -558,88 +544,6 @@ export default function TransparenciaPage() {
                           <Download size={16} className="text-gray-400 group-hover:text-primary-blue transition-colors" />
                         </a>
                       ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Laws and Grants */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="mb-12"
-              >
-                <h2 className="text-3xl font-bold mb-4 text-primary-navy flex items-center">
-                  <Scale className="mr-3" size={32} />
-                  Leis de Incentivo e Editais
-                </h2>
-                <p className="text-gray-600">
-                  Recursos públicos captados e sua aplicação
-                </p>
-              </motion.div>
-
-              <div className="space-y-6">
-                {lawsAndGrants.map((law, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-2xl p-6 shadow-lg"
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-primary-navy mb-2">
-                          {law.title}
-                        </h3>
-                        <p className="text-gray-600 mb-3">{law.description}</p>
-                        <div className="flex flex-wrap gap-3">
-                          <div className="flex items-center space-x-2 bg-green-50 px-3 py-1 rounded-full">
-                            <DollarSign size={16} className="text-green-600" />
-                            <span className="text-sm font-semibold text-green-700">{law.amount}</span>
-                          </div>
-                          <div className="flex items-center space-x-2 bg-blue-50 px-3 py-1 rounded-full">
-                            <CheckCircle size={16} className="text-blue-600" />
-                            <span className="text-sm font-semibold text-blue-700">{law.status}</span>
-                          </div>
-                          <div className="flex items-center space-x-2 bg-gray-100 px-3 py-1 rounded-full">
-                            <Calendar size={16} className="text-gray-600" />
-                            <span className="text-sm font-semibold text-gray-700">{law.year}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border-t border-gray-100 pt-4 mt-4">
-                      <p className="text-sm font-semibold text-gray-700 mb-3">Documentos:</p>
-                      <div className="space-y-2">
-                        {law.documents.map((doc, docIndex) => (
-                          <a
-                            key={docIndex}
-                            href={doc.file}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group"
-                          >
-                            <div className="flex items-center space-x-3">
-                              <FileText className="text-primary-blue" size={18} />
-                              <span className="text-sm font-medium text-gray-700">
-                                {doc.name}
-                              </span>
-                            </div>
-                            <ExternalLink size={16} className="text-gray-400 group-hover:text-primary-blue transition-colors" />
-                          </a>
-                        ))}
-                      </div>
                     </div>
                   </motion.div>
                 ))}
