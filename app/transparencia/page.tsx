@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { 
   FileText, Download, Scale, 
   Building2, Calendar, DollarSign, Users,
-  Award, ExternalLink, Shield, TrendingUp
+  ExternalLink, Shield, TrendingUp
 } from "lucide-react";
 
 export default function TransparenciaPage() {
@@ -82,29 +82,6 @@ export default function TransparenciaPage() {
         { name: "Balanço Patrimonial 2021", file: "/docs/balanco-2021.pdf", available: true },
         { name: "DRE - Demonstração do Resultado", file: "/docs/dre-2021.pdf", available: true },
         { name: "Relatório de Atividades 2021", file: "/docs/relatorio-atividades-2021.pdf", available: true }
-      ]
-    }
-  ];
-
-  const eventReports = [
-    {
-      event: "Santos Open ASSESP 2024",
-      date: "Novembro 2024",
-      type: "Verba Pública",
-      documents: [
-        { name: "Prestação de Contas - Emenda Impositiva", file: "/docs/prestacao-santos-open-2024.pdf" },
-        { name: "Relatório Final do Evento", file: "/docs/relatorio-santos-open-2024.pdf" },
-        { name: "Comprovantes de Despesas", file: "/docs/comprovantes-santos-open-2024.pdf" },
-        { name: "Relatório Fotográfico", file: "/docs/fotos-santos-open-2024.pdf" }
-      ]
-    },
-    {
-      event: "Open ASSESP #7",
-      date: "Setembro 2024",
-      type: "Privado",
-      documents: [
-        { name: "Relatório Financeiro", file: "/docs/relatorio-open-7.pdf" },
-        { name: "Lista de Participantes", file: "/docs/participantes-open-7.pdf" }
       ]
     }
   ];
@@ -469,80 +446,6 @@ export default function TransparenciaPage() {
                             </>
                           )}
                         </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Event Reports */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="mb-12"
-              >
-                <h2 className="text-3xl font-bold mb-4 text-primary-navy flex items-center">
-                  <Award className="mr-3" size={32} />
-                  Prestação de Contas de Eventos
-                </h2>
-                <p className="text-gray-600">
-                  Relatórios detalhados de cada evento realizado pela ASSESP
-                </p>
-              </motion.div>
-
-              <div className="space-y-6">
-                {eventReports.map((event, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gray-50 rounded-2xl p-6"
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-primary-navy mb-1">
-                          {event.event}
-                        </h3>
-                        <p className="text-sm text-gray-600">{event.date}</p>
-                      </div>
-                      <span className={`
-                        px-3 py-1 rounded-full text-xs font-semibold
-                        ${event.type === 'Verba Pública' 
-                          ? 'bg-blue-100 text-blue-700' 
-                          : 'bg-purple-100 text-purple-700'
-                        }
-                      `}>
-                        {event.type}
-                      </span>
-                    </div>
-
-                    <div className="space-y-2">
-                      {event.documents.map((doc, docIndex) => (
-                        <a
-                          key={docIndex}
-                          href={doc.file}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-between p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors group"
-                        >
-                          <div className="flex items-center space-x-3">
-                            <FileText className="text-primary-blue" size={18} />
-                            <span className="text-sm font-medium text-gray-700 group-hover:text-primary-blue transition-colors">
-                              {doc.name}
-                            </span>
-                          </div>
-                          <Download size={16} className="text-gray-400 group-hover:text-primary-blue transition-colors" />
-                        </a>
                       ))}
                     </div>
                   </motion.div>
