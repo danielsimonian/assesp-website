@@ -342,7 +342,7 @@ export default function TransparenciaPage() {
                           <span className="flex items-center space-x-3">
                             <Building2 className="text-primary-blue" size={18} />
                             <span className="text-sm font-medium text-gray-700">
-                              {partnership.instrument} · {partnership.totalAmount}
+                              {partnership.instrument}
                             </span>
                           </span>
                           <span className="text-xs font-semibold text-primary-blue">Ver parceria →</span>
