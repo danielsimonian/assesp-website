@@ -95,7 +95,7 @@ export default function TransparenciaPage() {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
                 Transparência
               </h1>
               <p className="text-2xl text-gray-200 mb-2 font-bold">
