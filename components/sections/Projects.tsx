@@ -55,7 +55,7 @@ export default function Projects() {
         </motion.div>
 
         <VideoGallery videos={openSantos2026.videos} className="mt-12" />
-        <PhotoGallery photos={openSantos2026.photos.slice(0, 6)} albumUrl={openSantos2026.albumUrl} className="mt-12" />
+        <PhotoGallery photos={openSantos2026.photos.slice(0, 6)} albumUrl={openSantos2026.albumUrl} className="mt-12 max-w-5xl mx-auto" />
       </div>
     </section>
   );
