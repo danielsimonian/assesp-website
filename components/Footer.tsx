@@ -76,14 +76,14 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-center space-x-2">
-                <Mail size={20} />
-                <a href="mailto:assesp_sp@hotmail.com" className="hover:text-white transition-colors">
+                <Mail size={20} className="flex-shrink-0" />
+                <a href="mailto:assesp_sp@hotmail.com" className="min-w-0 text-sm [overflow-wrap:anywhere] hover:text-white transition-colors">
                   assesp_sp@hotmail.com
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <MessageCircle size={20} />
-                <a href="https://wa.me/5513991760203" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <a href="https://wa.me/5513991760203" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">
                   (13) 99176-0203
                 </a>
               </li>
