@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import PhotoGallery from "@/components/PhotoGallery";
 import VideoGallery from "@/components/VideoGallery";
 import { openSantos2026 } from "@/lib/projetos";
 
@@ -65,6 +66,7 @@ export default function ProjetosPage() {
                     </div>
                   </div>
                   <VideoGallery videos={project.videos} className="mt-8" />
+                  <PhotoGallery photos={project.photos} albumUrl={project.albumUrl} className="mt-8" />
                 </motion.div>
               ))}
             </div>

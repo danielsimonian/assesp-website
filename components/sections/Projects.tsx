@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import PhotoGallery from "@/components/PhotoGallery";
 import VideoGallery from "@/components/VideoGallery";
 import { openSantos2026 } from "@/lib/projetos";
 
@@ -54,6 +55,7 @@ export default function Projects() {
         </motion.div>
 
         <VideoGallery videos={openSantos2026.videos} className="mt-12" />
+        <PhotoGallery photos={openSantos2026.photos.slice(0, 6)} albumUrl={openSantos2026.albumUrl} className="mt-12" />
       </div>
     </section>
   );

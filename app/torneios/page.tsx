@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
+import PhotoGallery from "@/components/PhotoGallery";
 import VideoGallery from "@/components/VideoGallery";
 import { openSantos2026 } from "@/lib/projetos";
 
@@ -59,6 +60,7 @@ export default function TorneiosPage() {
                   </div>
 
                   <VideoGallery videos={tournament.videos} className="mt-8" />
+                  <PhotoGallery photos={tournament.photos} albumUrl={tournament.albumUrl} className="mt-8" />
                 </motion.div>
               ))}
             </div>

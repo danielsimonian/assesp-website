@@ -26,6 +26,7 @@ Next.js 14 (App Router) · TypeScript · Tailwind · Framer Motion · lucide-rea
 - `lib/transparencia.ts` — parcerias com a administração pública (art. 11 da Lei 13.019/2014). Cada item gera `/transparencia/parcerias/[slug]` e aparece no ano certo em "Demonstrativos Financeiros".
 - `lib/projetos.ts` — projeto Open Santos 2026 + vídeos (usado na home, `/projetos`, `/torneios`).
 - `components/VideoGallery.tsx` — grade de vídeos 16:9 (some quando a lista está vazia).
+- `components/PhotoGallery.tsx` — fotos em colunas, sem cortar (some quando a lista está vazia). Lista em `lib/projetos.ts`, arquivos em `public/fotos/` (JPG até 1600 px). A home mostra só as 6 primeiras.
 - `app/transparencia/page.tsx` — `publishedFinancialDocuments` (PDFs por exercício; anos 2021→ano atual gerados no build, sem arquivo = "Em elaboração").
 - `public/docs/` — PDFs públicos (hoje só `estatuto-assesp.pdf`). `public/videos/` — MP4 + capas JPG.
 - `documentos-assesp/` — documentos administrativos locais, ignorados pelo git (não fazem parte do site).
